@@ -876,3 +876,8 @@ h1,h2,h3,h4 {text-wrap:balance;}
  .project-screenshots { grid-template-columns: minmax(0, 1fr); }
  .project-actions .button { max-width: 100%; }
 }
+
+.footer-actions .resume-link { font-weight: 600; }
+@media (max-width: 600px) {
+  .job .job-number { display: none; }
+}
