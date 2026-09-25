@@ -779,6 +779,22 @@ h1,h2,h3,h4 {text-wrap:balance;}
 }
 
 /* Header and footer share the same outer grid and identity alignment. */
+.company-logo {
+  border-radius: 50%;
+}
+.job .company,
+.job .period,
+.job .company-description {
+  font-size: var(--text-body);
+}
+.job .job-number,
+.project .project-number {
+  font-size: var(--text-subheading);
+  color: var(--green);
+  font-weight: 400;
+  opacity: 1;
+}
+
 .site-footer {
   display: block;
   padding: 0;
