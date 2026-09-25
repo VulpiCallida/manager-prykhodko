@@ -644,8 +644,8 @@
                                                                                                                                                                                                                                                                                                                       }
                                                                                                                                                                                                                                                                                                                       /* Typography: one scale shared by semantic text roles. */
                                                                                                                                                                                                                                                                                                                       :root{
-                                                                                                                                                                                                                                                                                                                        --text-caption:14px;
-                                                                                                                                                                                                                                                                                                                        --text-body:16px;
+                                                                                                                                                                                                                                                                                                                        --text-caption:16px;
+                                                                                                                                                                                                                                                                                                                        --text-body:18px;
                                                                                                                                                                                                                                                                                                                         --text-subheading:24px;
                                                                                                                                                                                                                                                                                                                         --text-heading:36px;
                                                                                                                                                                                                                                                                                                                         --text-display:56px;
@@ -712,3 +712,89 @@
                                                                                                                                                                                                                                                                                                                                                                   flex-wrap:wrap}
                                                                                                                                                                                                                                                                                                                                                                 }
 
+
+
+/* Education is always visible, in two separate groups. */
+.education-static {
+  padding: 28px 0;
+}
+.education-static .education-group {
+  padding: 0;
+  font-size: var(--text-body);
+}
+.education-static .education-group + .education-group {
+  margin-top: 28px;
+}
+.education-static h3 {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-size: var(--text-body);
+  font-weight: 600;
+}
+.education-static p {
+  margin: 0 0 12px;
+}
+.education-static ul {
+  margin: 0;
+  padding-left: 22px;
+}
+.education-static li + li {
+  margin-top: 10px;
+}
+
+/* Improve paragraph endings without forcing fixed line breaks. */
+p,li {text-wrap:pretty;hyphens:manual;word-break:normal;}
+h1,h2,h3,h4 {text-wrap:balance;}
+
+/* Shared numbering style for work experience and personal projects. */
+.job-number,
+.project-number {
+  font-size: var(--text-subheading);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  color: var(--green);
+  opacity: .65;
+}
+
+/* Clear hierarchy within the 3D-printing responsibilities. */
+.project-body .responsibility-title {
+  font-size: var(--text-subheading);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 28px 0 20px;
+}
+.project-body .responsibility-item {
+  font-size: var(--text-body);
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--green);
+  margin: 24px 0 8px;
+  display: flex;
+  gap: 9px;
+}
+.responsibility-item::before {
+  content: "•";
+  flex-shrink: 0;
+}
+
+/* Header and footer share the same outer grid and identity alignment. */
+.site-footer {
+  display: block;
+  padding: 0;
+  color: var(--ink);
+}
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-size: var(--text-caption);
+}
+@media (max-width: 1099px) {
+  .footer-actions { gap: 22px; }
+  .footer-actions .header-contact { display: inline; }
+}
+@media (max-width: 600px) {
+  .footer-inner { flex-wrap: wrap; row-gap: 18px; padding-bottom: 70px; }
+  .footer-actions { flex-wrap: wrap; gap: 16px; padding-left: 39px; }
+}
