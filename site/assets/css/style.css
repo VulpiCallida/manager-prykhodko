@@ -877,7 +877,14 @@ h1,h2,h3,h4 {text-wrap:balance;}
  .project-actions .button { max-width: 100%; }
 }
 
-.footer-actions .resume-link { font-weight: 600; }
+.header-actions .resume-link,
+.header-actions .header-contact,
+.footer-actions .resume-link,
+.footer-actions .header-contact {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  color: var(--ink);
+}
 @media (max-width: 600px) {
   .job .job-number { display: none; }
 }
