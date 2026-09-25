@@ -779,6 +779,29 @@ h1,h2,h3,h4 {text-wrap:balance;}
 }
 
 /* Header and footer share the same outer grid and identity alignment. */
+.intro-label {
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--green);
+}
+.education-static .education-group {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 25px;
+}
+.education-static h3 {
+  margin: 0;
+}
+.education-content > :last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .education-static .education-group {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
 .company-logo {
   border-radius: 50%;
 }
