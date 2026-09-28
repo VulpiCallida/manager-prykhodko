@@ -5,7 +5,7 @@ toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-
 mobileNav.addEventListener('click', event => { const link = event.target.closest('a'); if (!link) return; closeMenu(); const section = document.querySelector(link.getAttribute('href')); section.setAttribute('tabindex', '-1'); section.focus({preventScroll: true}); });
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && !mobileNav.hidden) { closeMenu(); toggle.focus(); } });
 document.addEventListener('click', event => { if (!event.target.closest('.header')) closeMenu(); });
-window.addEventListener('resize', () => { if (innerWidth >= 1100) closeMenu(); });
+window.addEventListener('resize', () => { if (innerWidth >= 1400) closeMenu(); });
 const sections = [...document.querySelectorAll('main > section[id]')];
 const links = [...document.querySelectorAll('[data-section]')];
 const topLink = document.querySelector('.back-top');
